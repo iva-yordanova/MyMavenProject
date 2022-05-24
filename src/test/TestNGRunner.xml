@@ -1,0 +1,26 @@
+<suite name="Suite1" verbose="1" parallel="classes">
+    <test name="RegressionSuite1">
+        <parameter name="a" value="7"/>
+        <parameter name="b" value="5"/>
+
+        <classes>
+            <class name="ModuleTest"/>
+        </classes>
+
+    </test>
+
+    <test name="RegressionSuite2">
+        <classes>
+            <class name="SumTest"/>
+            <class name="SubtractTest"/>
+            <class name="MultiplyTest"/>
+            <class name="DivisionClass"/>
+        </classes>
+
+        <groups>
+            <run>
+                <exclude name="divide"/>
+            </run>
+        </groups>
+    </test>
+</suite>
